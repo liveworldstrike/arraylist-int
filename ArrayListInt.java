@@ -60,5 +60,10 @@ public class ArrayListInt
             listaElementos = listaTemporal;
         }
     }
+   
+    public void clear()
+    {
+        listaElementos = new int[0];
+    }    
 }
 
