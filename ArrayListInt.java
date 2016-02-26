@@ -48,14 +48,16 @@ public class ArrayListInt
         int a = 0;
         if ((index <= size) && (index >= 0))
         {
-            for(; a < index; a++)
+            while(a < index)
             {
                 listaTemporal [a] = listaElementos [a];
+                a++;
             }
             listaTemporal[index] = elemento;
-            for(int cont = a; cont < size; cont++)
+            while( a< size)
             {
-                listaTemporal[cont + 1] = listaElementos[cont];
+                listaTemporal[a + 1] = listaElementos[a];
+                a++;
             }
             listaElementos = listaTemporal;
         }
@@ -151,5 +153,38 @@ public class ArrayListInt
         return nadaEnLaLista;
         
     }
+    
+    /**
+     *  elimina de la colección el elemento que ocupa la posición especificada
+     *  devuelve dicho elemento
+     *  si no es válido, no hace nada y devuelve -1.
+     */
+    public int remove(int index)
+    {
+        int elemento = -1;
+        int size = listaElementos.length;
+        int listaTemporal[] = new int[size - 1];
+        int a = 0;
+        if ((index <= size) && (index >= 0))
+        {
+             while( a < index)
+            {
+                listaTemporal[a] = listaElementos[a];
+                a++;
+            }
+            elemento = listaElementos[a];        
+            while( a < (size - 1))
+            {
+                listaTemporal[a] = listaElementos[a + 1];
+                a++;
+            }
+            listaElementos = listaTemporal;
+        }       
+        return elemento;
+    }
+    /**
+     * 
+     */
+    
 }
 
