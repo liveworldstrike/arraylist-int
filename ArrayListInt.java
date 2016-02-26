@@ -101,5 +101,18 @@ public class ArrayListInt
         }
         return elemento;
     }
+    
+    /**
+     * 
+     */
+    public void set(int index, int element)
+    {
+        
+        if((index < listaElementos.length) && (index >= 0))
+        {
+            listaElementos[index] = element;
+        }
+    
+    }
 }
 
