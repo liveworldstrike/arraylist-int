@@ -137,5 +137,19 @@ public class ArrayListInt
         return index;
         
     }
+    
+    /**
+     * devuelve true si la lista no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        boolean nadaEnLaLista = false;
+        if(listaElementos.length == 0)
+        {
+            nadaEnLaLista = true;
+        }
+        return nadaEnLaLista;
+        
+    }
 }
 
