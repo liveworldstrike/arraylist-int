@@ -182,9 +182,13 @@ public class ArrayListInt
         }       
         return elemento;
     }
-    /**
-     * 
-     */
     
+    /**
+     * devuelve el número de elementos de la colección
+     */
+    public int size()
+    {
+        return listaElementos.length;
+    }
 }
 
