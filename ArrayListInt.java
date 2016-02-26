@@ -103,7 +103,8 @@ public class ArrayListInt
     }
     
     /**
-     * 
+     * reemplaza el elemento en la posición index con el valor de element
+     * sino es valido no hace nada .
      */
     public void set(int index, int element)
     {
@@ -113,6 +114,28 @@ public class ArrayListInt
             listaElementos[index] = element;
         }
     
+    }
+    
+    /**
+     * devuelve el indice en el que aparece la primera ocurrencia del elemento especificado 
+     * -1 si no existe en la lista 
+     */
+    public int indexOf(int elemento)
+    {
+        boolean existe = false;
+        int a = 0;
+        int index = -1;
+        while((a < listaElementos.length) && !(existe))
+        {
+            if(listaElementos[a] == elemento)
+            {
+                index = a;
+                existe = true;
+            }
+            a++;            
+        }
+        return index;
+        
     }
 }
 
