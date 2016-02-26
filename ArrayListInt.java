@@ -61,9 +61,45 @@ public class ArrayListInt
         }
     }
    
+    /**
+    * vacía la colección.
+    */
     public void clear()
     {
         listaElementos = new int[0];
-    }    
+    }   
+    
+    /**
+     * devuelve true si la colección contiene ese elemento
+     * false en cualquier otro caso.
+     */
+    public boolean contains(int elemento)
+    {
+        boolean contiene = false;
+        int  a = 0;
+        while (a < listaElementos.length && !(contiene))
+        {
+            if(listaElementos[a] == elemento)
+            {
+                contiene = true;
+            }
+            a++;
+        }
+        return contiene;
+    }
+    
+    /**
+     * devuelve el elemento existente en la posición indicada
+     * si no es valido -1
+     */
+    public int get(int index)
+    {
+        int elemento = -1;
+        if((index < listaElementos.length) && (index >= 0))
+        {
+            elemento = listaElementos[index];
+        }
+        return elemento;
+    }
 }
 
