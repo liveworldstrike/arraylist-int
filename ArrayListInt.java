@@ -145,12 +145,8 @@ public class ArrayListInt
      */
     public boolean isEmpty()
     {
-        boolean nadaEnLaLista = false;
-        if(listaElementos.length == 0)
-        {
-            nadaEnLaLista = true;
-        }
-        return nadaEnLaLista;
+       
+       return listaElementos.length == 0;
         
     }
     
